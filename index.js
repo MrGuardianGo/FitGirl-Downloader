@@ -130,7 +130,9 @@ let links = $('a[href*="fuckingfast.co"]')
   .map((i, el) => $(el).attr("href"))
   .get();
 
-const optionalDownloads = links.filter((item) => item.includes("fg-optional"));
+const optionalDownloads = links.filter(
+  (item) => !item.includes("fitgirl-repacks.site"),
+);
 
 links = links.filter((item) => !optionalDownloads.includes(item));
 
